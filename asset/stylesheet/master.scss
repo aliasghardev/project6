@@ -1,0 +1,672 @@
+.head{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    >img{
+        width: 100%;
+        object-fit: cover;
+        background-position: -10px -80px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;left: 0;
+        z-index: -2;
+        opacity: 0;
+        &:nth-of-type(1){
+            animation: img1 6s infinite;
+        }
+        &:nth-of-type(2){
+            animation: img2 6s infinite;
+        }
+    }
+    >div{
+        width: 100%;
+        height: 100%;
+        padding: 50px 200px;
+        background-color: #00000065;
+        color: #fff;
+        text-shadow: 1px 1px 10px black;
+        >.row{
+            width: 100%;
+            height: 50px;
+            justify-content: space-between;
+            >h4{
+                text-transform: uppercase;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            >nav{
+                >ul{
+                    display: flex;
+                    >li{
+                        position: relative;
+                        >a{
+                            &:hover{
+                                border-bottom: solid #fff;
+                            }
+                        }
+                        &:hover>ul{
+                            height: 100px;
+                            visibility: visible;
+                            transition: .4s;
+                        }
+                        >ul{
+                            width: 150%;
+                            height: 0;
+                            visibility: hidden;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;top: 30px;
+                            >li{
+                                padding: 5px 10px;
+                                >a{
+                                    color: #000000;
+                                }
+                            }
+                        }
+                        >a{
+                            margin: 0 15px;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+            >span{
+                width: fit-content;
+                >a{
+                    padding: 10px 40px;
+                    background-color: red;
+                    transition: .4s;
+                    &:hover{
+                        background-color: #ffffff;
+                        color: #ff0000;
+                    }
+                }
+            }
+        }
+        >h2{
+            width: fit-content;
+            margin: 100px auto;
+            font-size: 40px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        >p{
+            width: 60%;
+            margin: 0px auto;
+            font-size: 18px;
+        }
+        >span{
+            width: fit-content;
+            margin: 100px auto;
+            display: flex;
+            >a{
+                border: solid #fff;
+                padding: 10px 30px;
+                transition: .4s;
+                &:hover{
+                    background-color: #fff;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+@keyframes img1{
+    0%,45%{z-index: -1;opacity: 1;}
+    50%{z-index: -2;opacity: 0;}
+    55%,95%{z-index: -2;opacity: 0;}
+    100%{z-index: -1;opacity: 1;}
+}
+@keyframes img2{
+    0%,45%{z-index: -2;opacity: 0;}
+    50%{z-index: -1;opacity: 1;}
+    55%,95%{z-index: -1;opacity: 1;}
+    100%{z-index: -2;opacity: 0;}
+}
+
+.icon{
+    width: 100%;
+    height: 70vh;
+    background-color: #f8f9fa;
+    >.row{
+        width: 100%;
+        height: 100%;
+        padding: 100px 150px;
+        justify-content: space-evenly;
+        >div{
+            width: 23%;
+            height: 100%;
+            >i{
+                width: fit-content;
+                margin: 20px auto;
+                display: flex;
+                >svg{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            >h3{
+                font-size: 25px;
+                text-transform: capitalize;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                color: #aa0000;
+            }
+            >p{
+                margin: 50px 0;
+                display: flex;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.dish{
+    width: 100%;
+    height: 100vh;
+    >h2{
+        width: fit-content;
+        margin: 100px auto;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: bold;
+        height: 10%;
+    }
+    >.row{
+        width: 100%;
+        height: 90%;
+        gap: 5px;
+        position: relative;
+        overflow: hidden;
+        >figure{
+            &:nth-of-type(1){
+                top: 0;left: 0;
+                animation: fig1 10s infinite;
+                opacity: 1;
+            }
+            &:nth-of-type(2){
+                top: 0;left: 34%;
+                animation: fig2 10s infinite;
+                opacity: 1;
+            }
+            &:nth-of-type(3){
+                top: 0;left: 68%;
+                animation: fig3 10s infinite;
+                opacity: 1;
+            }
+            &:nth-of-type(4){
+                top: 0;left: 102%;
+                animation: fig4 10s infinite;
+                opacity: 0;
+            }
+            position: absolute;
+            width: 33%;
+            height: 65%;
+            overflow: hidden;
+            &:hover>img{
+                transform: scale(1.1);
+            }
+            &:hover>figcaption>span>a{
+                background-color: rgba(250, 250, 250, 0);
+                border: solid #fff;
+            }
+            >img{
+                width: 100%;
+                object-fit: cover;
+                transition: .4s;
+            }
+            >figcaption{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #00000046;
+                text-align: center;
+                
+                >span{
+                    height: 50%;
+                    display: flex;align-items: end;
+                    justify-content: center;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border-radius: 50%;
+                    >a{
+                        height: 100px;
+                        width: 100px;
+                        display: flex;
+                        align-items: center;justify-content: center;
+                        border-radius: 50%;
+                        background-color: #c40000;
+                        transition: .4s;
+                    }
+                }
+                >p{
+                    margin: 20px;
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+@keyframes fig1{
+    0%{left: 0; opacity: 1;}
+    20%{left: 0; opacity: 1;}
+    23%{left: 0; opacity: 0;}
+    27%{left: 102%; opacity: 0;}
+    48%{left: 102%; opacity: 0;}
+    52%{left: 68%; opacity: 1;}
+    73%{left: 68%; opacity: 1;}
+    77%{left: 34%; opacity: 1;}
+    97%{left: 34%; opacity: 1;}
+    100%{left: 0%; opacity: 1;}
+}
+@keyframes fig2{
+    0%{left: 34%; opacity: 1;}
+    20%{left: 34%;opacity: 1;}
+    23%{left: 0;  opacity: 1;}
+    48%{left: 0;  opacity: 1;}
+    50%{left: 0;   opacity: 0;}
+    52%{left: 102%;opacity: 0;}
+    73%{left: 102%;opacity: 0;}
+    77%{left: 68%; opacity: 1;}
+    97%{left: 68%; opacity: 1;}
+    100%{left: 34%;opacity: 1;}
+}
+@keyframes fig3{
+    0%{left: 68%; opacity: 1;}
+    20%{left: 68%;opacity: 1;}
+    23%{left: 34%;  opacity: 1;}
+    48%{left: 34%;  opacity: 1;}
+    52%{left: 0;opacity: 1;}
+    73%{left: 0%;opacity: 1;}
+    75%{left: 0%;opacity: 0;}
+    77%{left: 102%; opacity: 0;}
+    97%{left: 102%; opacity: 0;}
+    100%{left: 68%;opacity: 1;}
+}
+@keyframes fig4{
+    0%{left: 102%; opacity: 0;}
+    20%{left: 102%;opacity: 0;}
+    23%{left: 68%;  opacity: 1;}
+    48%{left: 68%;  opacity: 1;}
+    52%{left: 34%;opacity: 1;}
+    73%{left: 34%;opacity: 1;}
+    77%{left: 0%; opacity: 1;}
+    95%{left: 0%; opacity: 1;}
+    98%{left: 0%;opacity: 0;}
+    100%{left: 102%;opacity: 0;}
+}
+
+.menu{
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f9fa;
+    >h3{
+        width: 100%;
+        height: 20%;
+        text-transform: uppercase;
+        color: #000000;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+    >.row{
+        width: 70%;
+        height: 68%;
+        margin: 0 200px;
+        >.img{
+            width: 25%;
+            height: 50%;
+            >img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        >.txt{
+            background-color: #fff;
+            width: 25%;
+            height: 50%;
+            padding: 20px;
+            *{
+                text-transform: capitalize;
+            }
+            >h6{
+                font-size: 20px;
+            }
+            >p{
+                color: #3f3f3f;
+                margin: 20px 0;
+            }
+            >span{
+                color: #aa0000;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.clip{
+    width: 100%;
+    height: 100vh;
+    background-color: #a8a8a8;
+    >.row{
+        >div{
+            width: 50%;
+            height: 100%;
+            &:nth-of-type(1){
+                >h3{
+                    position: relative;
+                    width: fit-content;
+                    margin: 100px auto;
+                    font-size: 40px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: rgb(0, 0, 0);
+                    >div{
+                        &:nth-of-type(1){
+                            position: absolute;
+                            left: 80%;top: 210%;
+                            margin: 200px auto;
+                            width: 200px; 
+                            height: 200px;
+                            background-image: url(../img/1.jpg);
+                            background-size: cover;
+                            border-radius: 0 0 200px  0;
+                            transition: .4s;
+                            &:hover{
+                                border-radius: 200px 200px 200px 200px;
+                                transform: translatex(-100px) translateY(-100px) scale(2);
+                                z-index: 2;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: -210%;left: 80%;
+                            margin: 200px auto;
+                            width: 200px; 
+                            height: 200px;
+                            background-image: url(../img/2.jpg);
+                            background-size: cover;
+                            border-radius: 0 200px 0 0;
+                            transition: .4s;
+                            &:hover{
+                                border-radius: 200px 200px 200px 200px;
+                                transform: translatex(-100px) translateY(100px) scale(2);
+                                z-index: 2;
+                            }
+                        }
+                        &:nth-of-type(3){
+                            position: absolute;
+                            top:-210%;left: -90%;
+                            margin: 200px auto;
+                            width: 200px; 
+                            height: 200px;
+                            background-image: url(../img/3.jpg);
+                            background-size: cover;
+                            border-radius: 200px 0 0 0;
+                            transition: .4s;
+                            &:hover{
+                                border-radius: 200px 200px 200px 200px;
+                                transform: translatex(100px) translateY(100px) scale(2);
+                                z-index: 2;
+                            }
+                        }
+                        &:nth-of-type(4){
+                            position: absolute;
+                            left: -90%;top: 210%;
+                            margin: 200px auto;
+                            width: 200px; 
+                            height: 200px;
+                            background-image: url(../img/4.jpg);
+                            background-position:  -25px;
+                            background-size: cover;
+                            border-radius: 0 0 0 200px;
+                            transition: .4s;
+                            &:hover{
+                                border-radius: 200px 200px 200px 200px;
+                                transform: translatex(100px) translateY(-100px) scale(2);
+                                z-index: 2;
+                            }
+                        }
+                       
+                    }
+                }
+                
+            }
+            &:nth-of-type(2){
+                >h2{
+                    width: fit-content;
+                    margin: 100px auto;
+                    font-size: 40px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: rgb(0, 0, 0);
+                    position: relative;
+                    >*{
+                        border: 1px solid wheat;
+                    }
+                    >.box1{
+                        position: absolute;
+                        top: 200%;right: -150%;
+                        width: 400px;
+                        height: 400px;
+                        transition: 1s;
+                        clip-path: circle(30% at 100% 100% );
+                        background-image: url(../img/p1.jpg);
+                        background-position: -50px;
+                        background-size: cover;
+                        margin: 0px auto;
+                        z-index: 0;
+                        &:hover{
+                            clip-path: circle(100%);
+                            z-index: 2;
+                        }
+                    }
+                    >.box2{
+                        position: absolute;
+                        top: 200%;right: -150%;
+                        width: 400px;
+                        height: 400px;
+                        transition: 1s;
+                        clip-path: circle(30% at 0 0 );
+                        background-image: url(../img/p2.jpg);
+                        background-size: cover;
+                        margin: 0px auto;
+                        z-index: 0;
+                        &:hover{
+                            clip-path: circle(100%);
+                            z-index: 2;
+                        }
+                    }
+                    >.box3{
+                        position: absolute;
+                        top: 200%;right: -150%;
+                        width: 400px;
+                        height: 400px;
+                        transition: 1s;
+                        clip-path: circle(30% at 0 100% );
+                        background-image: url(../img/p3.jpg);
+                        background-position: -50px;
+                        background-size: cover;
+                        margin: 0px auto;
+                        z-index: 0;
+                        &:hover{
+                            clip-path: circle(100%);
+                            z-index: 2;
+                        }
+                    }
+                    >.box4{
+                        position: absolute;
+                        top: 200%;right: -150%;
+                        width: 400px;
+                        height: 400px;
+                        transition: 1s;
+                        clip-path: circle(30% at 100% 0 );
+                        background-image: url(../img/p4.jpg);
+                        background-size: cover;
+                        margin: 0px auto;
+                        z-index: 0;
+                        &:hover{
+                            clip-path: circle(100%);
+                            z-index: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.test{
+    width: 100%;
+    height: 100vh;
+    >h3{
+        width: 100%;
+        height: 20%;
+        text-transform: uppercase;
+        color: #000000;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 50px;
+    }
+    >.row{
+        width: 80%;
+        height: 80%;
+        margin: 100px 200px;
+        justify-content: space-evenly;
+        >div{
+            width: 30%;
+            height: 80%;
+            >p{
+                font-size: 20px;
+                line-height: 40px;
+            }
+            >.row{
+                margin-top: 30px;
+                >img{
+                    width: 80px;
+                    border-radius: 50%;
+                }
+                >div{
+                    >h6{
+                        font-size: 18px;
+                        text-transform: capitalize;
+                        margin: 10px;
+                    }
+                    >p{
+                        margin-left: 10px;
+                        color: #6d6d6d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.foot{
+    width: 100%;
+    height: 60vh;
+    background-color: #313131;
+    >.row{
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #ffffff;
+        >div{
+            width: 30%;
+            height: 80%;
+            padding: 30px;
+            &:nth-of-type(1){
+                >h4{
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                >p{
+                    color: #898989;
+                }
+                >.row{
+                    margin-top: 60px;
+                    >a{
+                        border: 1px solid #777777;
+                        border-radius: 50%;
+                        padding: 10px;
+                        margin-left: 5px;
+                        transition: .4s;
+                        &:hover{
+                            background-color: #fff;
+                        }
+                        &:hover>svg{
+                            color: #000000;
+                        }
+                        >svg{
+                            width: 20px;
+                            height: 20px;
+                            color: #ff0000;
+                            transition: .4s;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                >h4{
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                >ul{
+                    >li{
+                        padding: 15px 0;
+                        >a{
+                            color: #df0000;
+                            text-transform: capitalize;
+                            transition: .4s;
+                            &:hover{
+                                color: #ffffff;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3){
+                >h4{
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                >.row{
+                    width: 100%;
+                    margin: 20px 0;
+                    >a{
+                        margin-right: 20px;
+                        &:hover>svg{
+                            color: #ffffff;
+                        }
+                        >svg{
+                            width: 25px;
+                            height: 25px;
+                            color: #9f9e9f;
+                            transition: .4s;
+                        }
+                    }
+                }
+                >h2{
+                    text-transform: uppercase;
+                    color: #00ffbb;
+                    margin: 40px 0;
+                }
+                >img{
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
